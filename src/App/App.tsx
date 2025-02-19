@@ -4,6 +4,8 @@ import { useWords } from "../Hooks/useWord";
 import { SearchBar } from "../SearchBar/SearchBar";
 
 import "./App.scss";
+import { DictionaryCard } from "../WordCard/DictionaryCard";
+import { WordTypes } from "../types/words.types";
 
 export const App = () => {
   const [word, setWord] = useState("");
@@ -17,26 +19,19 @@ export const App = () => {
     }
   };
 
-  const returnedWord = data &&
+  const returnedWord: WordTypes = data &&
     data[0] && {
       word: data[0].word,
-      phonetics: data[0].phonetics[1]?.text,
-      meanings: data[0].meanings.map((meaning) => ({
-        partOfSpeech: meaning.partOfSpeech,
-        definitions: meaning.definitions.map((definition, index) => ({
-          definition: definition.definition,
-        })),
-        synonyms: meaning.synonyms,
-      })),
+      phonetics: data[0]?.phonetics[1]?.text,
+      meanings: data[0].meanings[0],
       sourceUrls: data[0]?.sourceUrls[0],
     };
-
-  console.log(returnedWord);
 
   return (
     <div className="App">
       <h2>Dictionary</h2>
       <SearchBar action={handleFormSubmit} />
+      {returnedWord && <DictionaryCard returnedWord={returnedWord} />}
     </div>
   );
 };
