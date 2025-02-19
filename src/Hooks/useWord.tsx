@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 
 import { fetchWords } from "../ApiService/ApiService";
-import { WordTypes } from "../types/words.types";
+import { ReturnedWordType } from "../types/words.types";
 
 export const useWords = (word: string) =>
-  useQuery<WordTypes[]>({
+  useQuery<ReturnedWordType[]>({
     queryKey: ["words", word],
     queryFn: () => fetchWords(word),
   });

@@ -1,5 +1,5 @@
 import React from "react";
-import "./SearchBar.scss"; // Make sure the styles are correctly imported
+import "./SearchBar.scss";
 
 export const SearchBar = ({
   action,
