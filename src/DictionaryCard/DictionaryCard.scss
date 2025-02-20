@@ -48,3 +48,10 @@ strong {
     font-size: 0.5rem;
   }
 }
+
+@media (max-width: 700px) {
+  .word__source,
+  a {
+    font-size: 0.6rem;
+  }
+}
