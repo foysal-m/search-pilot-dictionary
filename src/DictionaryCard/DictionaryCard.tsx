@@ -41,8 +41,10 @@ export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
           </>
           {first2Synonyms && (
             <>
-              <strong>synonyms: </strong>
-              {first2Synonyms.join(", ")}
+              <strong>synonyms </strong>
+              <span className="word__synonyms">
+                {first2Synonyms.join(", ")}
+              </span>
             </>
           )}
           {sourceUrls.length > 0 && (

@@ -10,7 +10,7 @@ $submit-font-size: 1.2rem;
 
 .form {
   width: 100%;
-  margin: $margin-generic * 5 auto;
+  margin: $margin-generic * 2 auto;
   display: flex;
   box-shadow: 0 0 $margin-generic 1px #3333;
   border-radius: math.div($margin-generic, 2);
@@ -23,6 +23,11 @@ $submit-font-size: 1.2rem;
   padding: $margin-generic $margin-generic * 2;
   border: 1px solid $border-color;
   border-right: none;
+  font-family: fantasy;
+}
+
+.form__input::placeholder {
+  font-family: fantasy;
 }
 
 .form__submit {
