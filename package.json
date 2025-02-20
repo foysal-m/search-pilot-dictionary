@@ -5,9 +5,9 @@
   "scripts": {
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
+    "start": "ts-node server/index.ts",
     "dev": "webpack serve --open --mode development",
-    "build": "webpack --mode production",
-    "build-storybook": "storybook build"
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +29,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
+    "@types/express": "^5.0.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.13.4",
     "@types/react": "^19.0.10",
@@ -48,9 +49,12 @@
     "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
+    "@babel/register": "^7.25.9",
     "@tanstack/react-query": "^5.66.7",
     "@tanstack/react-query-devtools": "^5.66.7",
     "css-loader": "^7.1.2",
+    "express": "^4.21.2",
+    "ignore-styles": "^5.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "^5.0.1",
