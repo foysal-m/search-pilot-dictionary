@@ -32,7 +32,7 @@ export const DictionaryCard = ({
             </div>
           )}
           <div>
-            <p>Meaning:</p>
+            <p>meaning</p>
             <ol>
               {first3Definitions.map((definition) => (
                 <li key={definition.definition}>{definition.definition}</li>

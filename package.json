@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
     "dev": "webpack serve --open --mode development",
     "build": "webpack --mode production",
     "build-storybook": "storybook build"
