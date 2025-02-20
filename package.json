@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch",
+    "test": "react-scripts test",
     "dev": "webpack serve --open --mode development",
     "build": "webpack --mode production",
-    "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "keywords": [],
@@ -25,7 +24,12 @@
     "@storybook/blocks": "^8.5.8",
     "@storybook/react-webpack5": "^8.5.8",
     "@storybook/test": "^8.5.8",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.4",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "babel-loader": "^9.2.1",
@@ -45,10 +49,10 @@
   "dependencies": {
     "@tanstack/react-query": "^5.66.7",
     "@tanstack/react-query-devtools": "^5.66.7",
-    "@testing-library/react": "^16.2.0",
     "css-loader": "^7.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-scripts": "^5.0.1",
     "style-loader": "^4.0.0"
   }
 }
