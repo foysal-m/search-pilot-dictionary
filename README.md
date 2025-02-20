@@ -2,7 +2,7 @@
 
 ## Description
 
-Application Name is a web application designed to provide users with detailed information about words, including their phonetics, meanings, and source URLs. This application fetches data from an external API and displays it in a user-friendly interface.
+This is web application for dictionary to provide users with detailed information about words, including their phonetics, meanings, and source URLs. This application fetches data from an external API and displays it in a user-friendly interface.
 
 ## Features
 
@@ -15,7 +15,7 @@ Application Name is a web application designed to provide users with detailed in
 
 1. Clone the repository:
 
-   git clone `url to be added after repo creation`
+   git clone `https://github.com/foysal-m/search-pilot-dictionary.git`
 
 2. Navigate to the project directory
 
