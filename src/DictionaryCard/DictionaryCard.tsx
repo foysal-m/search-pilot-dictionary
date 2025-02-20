@@ -32,7 +32,7 @@ export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
             </div>
           )}
           <>
-            <small>meaning</small>
+            <small className="meaning">meaning</small>
             <ol>
               {first3Definitions.map((definition) => (
                 <li key={definition.definition}>{definition.definition}</li>
@@ -41,7 +41,7 @@ export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
           </>
           {first2Synonyms && (
             <>
-              <strong>synonyms </strong>
+              <strong>synonyms</strong>
               <span className="word__synonyms">
                 {first2Synonyms.join(", ")}
               </span>

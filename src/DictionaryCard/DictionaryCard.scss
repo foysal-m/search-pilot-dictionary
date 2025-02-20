@@ -1,12 +1,14 @@
 @use "sass:math";
 
 $margin-generic: 10px;
+$dim-color: #928888;
 
 .dictionary__card {
   border-radius: math.div($margin-generic, 2);
   box-shadow: 0 0 $margin-generic rgba(0, 0, 0, 0.1);
   position: relative;
   padding: $margin-generic $margin-generic * 2;
+  font-size: medium;
 }
 
 .word__source {
@@ -14,19 +16,28 @@ $margin-generic: 10px;
   padding-top: $margin-generic;
   border-top: 2px solid #ccc;
   font-size: small;
+  color: $dim-color;
 }
 
-li,
-strong {
-  font-size: large;
+li {
+  font-size: medium;
   font-weight: bold;
 }
 
 .word__source a {
-  color: black;
+  color: $dim-color;
   text-decoration: none;
 }
 
 .word__synonyms {
-  color: rgb(67, 67, 202);
+  color: #0f6bc0;
+}
+
+.meaning {
+  color: $dim-color;
+}
+
+strong {
+  font-size: large;
+  margin-right: $margin-generic;
 }
