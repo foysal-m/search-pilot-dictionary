@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import { SearchBar } from "../SearchBar/SearchBar";
 import { DictionaryCard } from "../DictionaryCard/DictionaryCard";
 import { useDictionary } from "../Hooks/useDictionary";
+import Texts from "../locales/dictionary.json";
 
 import "./App.scss";
 
 export const App = () => {
   const [word, setWord] = useState("");
+  const { t } = useTranslation();
 
   const { data: words, isLoading, isError, error } = useDictionary(word);
 
@@ -32,7 +35,7 @@ export const App = () => {
 
   return (
     <div className="App">
-      <h2>Dictionary</h2>
+      <h2>{t(Texts.title)}</h2>
       <SearchBar action={handleFormSubmit} />
       {isError && !isLoading && word && (
         <div className="error">{error.message}</div>
