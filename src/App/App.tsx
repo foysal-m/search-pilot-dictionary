@@ -13,6 +13,7 @@ export const App = () => {
 
   const handleFormSubmit = (formData: FormData) => {
     const word = formData.get("word") as string;
+
     if (word) {
       setWord(word.trim());
     }
