@@ -1,11 +1,11 @@
 import React from "react";
 import "./SearchBar.scss";
 
-export const SearchBar = ({
-  action,
-}: {
+type SearchBarPropType = {
   action: (formData: FormData) => void;
-}) => {
+};
+
+export const SearchBar = ({ action }: SearchBarPropType) => {
   return (
     <form action={action} className="form">
       <input

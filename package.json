@@ -5,7 +5,7 @@
   "scripts": {
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
-    "start": "ts-node server/index.ts",
+    "start": " npm run dev && ts-node server/index.ts",
     "dev": "webpack serve --open --mode development",
     "build": "webpack --mode production"
   },
@@ -38,6 +38,7 @@
     "html-webpack-plugin": "^5.6.3",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3",
     "sass": "^1.85.0",
     "sass-loader": "^16.0.5",
     "storybook": "^8.5.8",

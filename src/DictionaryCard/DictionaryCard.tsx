@@ -3,11 +3,11 @@ import { ReturnedWordType } from "../types/words.types";
 
 import "./DictionaryCard.scss";
 
-export const DictionaryCard = ({
-  wordData,
-}: {
+type DictionaryCardProp = {
   wordData: ReturnedWordType;
-}) => {
+};
+
+export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
   const { word, phonetics, meanings, sourceUrls } = wordData;
 
   const [firstMeaning] = meanings;
