@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { SearchBar } from "../SearchBar/SearchBar";
-
-import "./App.scss";
 import { DictionaryCard } from "../DictionaryCard/DictionaryCard";
 import { useDictionary } from "../Hooks/useDictionary";
+
+import "./App.scss";
 
 export const App = () => {
   const [word, setWord] = useState("");
