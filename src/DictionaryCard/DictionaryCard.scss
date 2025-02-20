@@ -1,7 +1,7 @@
 @use "sass:math";
 
 $margin-generic: 10px;
-$dim-color: #928888;
+$dim-color: #8f8f8f;
 
 .dictionary__card {
   border-radius: math.div($margin-generic, 2);
@@ -40,4 +40,11 @@ li {
 strong {
   font-size: large;
   margin-right: $margin-generic;
+}
+
+@media (max-width: 600px) {
+  .word__source,
+  a {
+    font-size: 0.5rem;
+  }
 }
