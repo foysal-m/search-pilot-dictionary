@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { App } from "./App/App";
 
-describe("index.tsx", () => {
+describe("Initial renders", () => {
   it("should initially render the app correctly", () => {
     const queryClient = new QueryClient();
 

@@ -15,15 +15,20 @@ Application Name is a web application designed to provide users with detailed in
 
 1. Clone the repository:
 
-   git clone `https://github.com/yourusername/your-repo-name.git`
+   git clone `url to be added after repo creation`
 
 2. Navigate to the project directory
 
 3. Install dependencies:
 
-   `npm install`
+   `npm install` && run `npm run dev` to start the server
 
 4. Open your browser and navigate to `http://localhost:3000`.
+
+## test
+
+- To run the tests: `npm run test`
+- To run the test with coverage report: `npm run test:coverage`
 
 ### Technologies and Concepts
 

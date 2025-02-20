@@ -1,10 +1,16 @@
+@use "sass:math";
+
+$margin-generic: 10px;
+
 .dictionary__card {
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: math.div($margin-generic, 2);
+  box-shadow: 0 0 $margin-generic rgba(0, 0, 0, 0.1);
   position: relative;
-  padding: 10px 20px;
+  padding: $margin-generic $margin-generic * 2;
 }
 
 .word__source {
-  margin: 10px auto;
+  margin: $margin-generic * 2 auto;
+  padding-top: $margin-generic;
+  border-top: 2px solid #ccc;
 }

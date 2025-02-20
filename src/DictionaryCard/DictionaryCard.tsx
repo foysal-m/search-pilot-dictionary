@@ -23,7 +23,7 @@ export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
   return (
     <div className="dictionary__card">
       {wordData && (
-        <div>
+        <>
           <p>{word}</p>
           <p>{phonetics}</p>
           {partOfSpeech && (
@@ -31,19 +31,19 @@ export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
               <h3>{partOfSpeech}</h3>
             </div>
           )}
-          <div>
+          <>
             <p>meaning</p>
             <ol>
               {first3Definitions.map((definition) => (
                 <li key={definition.definition}>{definition.definition}</li>
               ))}
             </ol>
-          </div>
+          </>
           {first2Synonyms && (
-            <div>
+            <>
               <strong>synonyms: </strong>
               {first2Synonyms.join(", ")}
-            </div>
+            </>
           )}
           {sourceUrls.length > 0 && (
             <div className="word__source">
@@ -53,7 +53,7 @@ export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
               </a>
             </div>
           )}
-        </div>
+        </>
       )}
     </div>
   );

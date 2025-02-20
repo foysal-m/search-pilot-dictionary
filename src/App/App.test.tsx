@@ -71,17 +71,14 @@ describe("App Component", () => {
 
     expect(screen.getByText(/loading.../i)).toBeInTheDocument();
 
-    // Ensure other elements are not rendered while loading
     expect(screen.queryByText(/hello/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/greeting/i)).not.toBeInTheDocument();
 
-    // Ensure the input and button are still visible
     expect(inputElement).toBeInTheDocument();
     expect(buttonElement).toBeInTheDocument();
   });
 
   it("renders word data when not loading", async () => {
-    // Update mock to simulate loaded state
     (useDictionary as jest.Mock).mockReturnValue(mockData);
 
     render(<App />);
@@ -98,7 +95,6 @@ describe("App Component", () => {
   });
 
   it("renders error message when a non-existent word is searched", async () => {
-    // Update mock to simulate error state when searching for a non-existent word
     (useDictionary as jest.Mock).mockReturnValue(errorMockData);
 
     render(<App />);
