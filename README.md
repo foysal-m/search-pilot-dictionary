@@ -15,18 +15,15 @@ Application Name is a web application designed to provide users with detailed in
 
 1. Clone the repository:
 
-   ```sh
-   git clone https://github.com/yourusername/your-repo-name.git
-
-   ```
+   git clone `https://github.com/yourusername/your-repo-name.git`
 
 2. Navigate to the project directory
 
 3. Install dependencies:
 
-   npm install
+   `npm install`
 
-4. Open your browser and navigate to http://localhost:3000.
+4. Open your browser and navigate to `http://localhost:3000`.
 
 ### Technologies and Concepts
 
@@ -56,3 +53,11 @@ Jest is a JavaScript testing framework used for unit and integration testing. It
 - **ReactDOM**: Handles DOM-specific methods for efficient rendering of React components.
 - **React StrictMode**: Activates additional checks and warnings to highlight potential problems in the application.
 - **@tanstack/react-query-devtools**: A set of debugging tools for React Query, making it easier to track and optimize queries.
+
+### Improvements to be Made:
+
+- I encountered a hydration error during SSR (Server-Side Rendering) in console.
+- Not sure if a browser extension is causing the issue, but I’m hoping to find a solution.
+- While SSR improves performance and is better for SEO, it does have some caveats.
+- If it weren’t for this error, I would be able to proceed with writing Cypress tests or improving the application with E2E tests to ensure proper functionality.
+  ![alt text](image.png)
