@@ -13,10 +13,18 @@ $margin-generic: 10px;
   margin: $margin-generic * 2 auto;
   padding-top: $margin-generic;
   border-top: 2px solid #ccc;
+  font-size: small;
 }
 
-ol {
-  font-weight: 600;
+li,
+strong {
+  font-size: large;
+  font-weight: bold;
+}
+
+.word__source a {
+  color: black;
+  text-decoration: none;
 }
 
 .word__synonyms {
