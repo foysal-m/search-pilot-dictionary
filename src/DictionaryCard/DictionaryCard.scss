@@ -16,6 +16,10 @@ $margin-generic: 10px;
   font-size: small;
   margin: $margin-generic * 2 auto;
   padding-top: $margin-generic;
+
+  & span {
+    margin-right: 5px;
+  }
 }
 
 li {

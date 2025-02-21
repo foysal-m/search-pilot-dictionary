@@ -54,10 +54,14 @@ Jest is a JavaScript testing framework used for unit and integration testing. It
 
 ### Other Technologies Used
 
-- **React**: A JavaScript library for building user interfaces, enabling reusable components and efficient state management.
+- **React**:Facilitates the creation of the board and streamlines app development with its component-based architecture
 - **ReactDOM**: Handles DOM-specific methods for efficient rendering of React components.
 - **React StrictMode**: Activates additional checks and warnings to highlight potential problems in the application.
 - **@tanstack/react-query-devtools**: A set of debugging tools for React Query, making it easier to track and optimize queries.
+- **TypeScript**: Provides strict type checking to enhance code quality and maintainability
+- **React Testing Library**: Used for unit testing to ensure component functionality and reliability
+- **SCSS**: Utilized for styling the board, offering advanced features and a more maintainable CSS structure
+- **i18next**: For localizing content
 
 ### Improvements to be Made:
 

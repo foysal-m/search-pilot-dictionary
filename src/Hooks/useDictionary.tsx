@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-
 import { fetchWords } from "../ApiService/ApiService";
 import { ReturnedWordType } from "../types/words.types";
 
