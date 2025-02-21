@@ -40,9 +40,11 @@ React Query is a powerful library for fetching, caching, and updating asynchrono
 
 Server-Side Rendering (SSR) generates HTML on the server instead of the client, improving performance and SEO by providing fully rendered pages to the client. In this project, SSR is implemented using Express, a minimal Node.js web application framework.
 
-### Expres
+### Express
 
-Rendering React component on Server
+**Rendering React Components on the Server**
+
+Express is used in this app to implement Server-Side Rendering (SSR), which enables React components to be rendered on the server rather than the client. This results in faster initial page loads and improved SEO, as the server sends fully-rendered HTML to the browser. Express handles incoming requests, processes the rendering of React components using ReactDOMServer, and then sends the resulting HTML back to the client. Additionally, Express serves static files like JavaScript and CSS, ensuring the app becomes interactive after the page load.
 
 ### Webpack
 
