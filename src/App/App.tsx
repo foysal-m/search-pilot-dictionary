@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-
 import { SearchBar } from "../SearchBar/SearchBar";
 import { DictionaryCard } from "../DictionaryCard/DictionaryCard";
 import { useDictionary } from "../Hooks/useDictionary";
 import Texts from "../locales/dictionary.json";
-
 import "./App.scss";
 
 export const App = () => {

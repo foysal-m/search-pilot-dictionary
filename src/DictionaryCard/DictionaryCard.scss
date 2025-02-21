@@ -1,21 +1,21 @@
 @use "sass:math";
 
-$margin-generic: 10px;
 $dim-color: #8f8f8f;
+$margin-generic: 10px;
 
 .dictionary__card {
   border-radius: math.div($margin-generic, 2);
   box-shadow: 0 0 $margin-generic rgba(0, 0, 0, 0.1);
-  padding: $margin-generic $margin-generic * 2;
   font-size: medium;
+  padding: $margin-generic $margin-generic * 2;
 }
 
 .word__source {
+  border-top: 2px solid #ccc;
+  color: $dim-color;
+  font-size: small;
   margin: $margin-generic * 2 auto;
   padding-top: $margin-generic;
-  border-top: 2px solid #ccc;
-  font-size: small;
-  color: $dim-color;
 }
 
 li {

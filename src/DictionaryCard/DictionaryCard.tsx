@@ -1,6 +1,5 @@
 import React from "react";
 import { ReturnedWordType } from "../types/words.types";
-
 import "./DictionaryCard.scss";
 
 type DictionaryCardProp = {

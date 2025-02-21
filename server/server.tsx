@@ -1,10 +1,9 @@
 import express from "express";
 import React from "react";
-import ReactDOMServer from "react-dom/server";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import fs from "fs";
 import path from "path";
-
+import ReactDOMServer from "react-dom/server";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { App } from "../src/App/App";
 
 const PORT = 3000;
