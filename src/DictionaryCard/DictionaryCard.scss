@@ -6,7 +6,6 @@ $dim-color: #8f8f8f;
 .dictionary__card {
   border-radius: math.div($margin-generic, 2);
   box-shadow: 0 0 $margin-generic rgba(0, 0, 0, 0.1);
-  position: relative;
   padding: $margin-generic $margin-generic * 2;
   font-size: medium;
 }

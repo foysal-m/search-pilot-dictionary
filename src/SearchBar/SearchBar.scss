@@ -24,6 +24,12 @@ $submit-font-size: 1.2rem;
   border: 1px solid $border-color;
   border-right: none;
   font-family: fantasy;
+
+  &:focus {
+    outline: none;
+    border-color: $border-color;
+    box-shadow: none;
+  }
 }
 
 .form__input::placeholder {
@@ -36,8 +42,5 @@ $submit-font-size: 1.2rem;
   border-left: none;
   cursor: pointer;
   font-size: $submit-font-size;
-}
-
-button {
-  width: 100%;
+  background-color: field;
 }
