@@ -2,7 +2,7 @@
 
 ## Description
 
-This is web application for dictionary to provide users with detailed information about words, including their phonetics, meanings, and source URLs. This application fetches data from an external API and displays it in a user-friendly interface.
+This is a web application for dictionary to provide users with detailed information about words, including their phonetics, meanings, and source URLs. This application fetches data from an external API and displays it in a user-friendly interface.
 
 ## Features
 
@@ -32,10 +32,6 @@ This is web application for dictionary to provide users with detailed informatio
 
 ### Technologies and Concepts
 
-### Form Action
-
-Form actions in React handle form submissions, process user input, and send it to an API endpoint. They simplify managing form state, validation, and submission, ensuring better handling of user input and integration with backend systems.
-
 ### React Query
 
 React Query is a powerful library for fetching, caching, and updating asynchronous data in React applications. It abstracts data-fetching logic, simplifies handling loading states, and ensures synchronization with the server, improving performance and reliability.
@@ -43,6 +39,10 @@ React Query is a powerful library for fetching, caching, and updating asynchrono
 ### Server-Side Rendering (SSR)
 
 Server-Side Rendering (SSR) generates HTML on the server instead of the client, improving performance and SEO by providing fully rendered pages to the client. In this project, SSR is implemented using Express, a minimal Node.js web application framework.
+
+### Expres
+
+Rendering React component on Server
 
 ### Webpack
 
