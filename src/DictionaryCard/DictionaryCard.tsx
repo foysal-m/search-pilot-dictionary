@@ -22,22 +22,18 @@ export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
     ? sourceUrls.join(", ")
     : sourceUrls;
 
-  //t("translation:user.form", { dynamicValue: "Some value or variable" });
-
   return (
     <div className="dictionary__card">
       {wordData && (
         <>
-          <p>{t(Texts.word, { word })}</p>
-          {phonetics && <p>{t(Texts.phonetics, { phonetics })}</p>}
-          {partOfSpeech && <h3>{t(Texts.partOfSpeech, { partOfSpeech })}</h3>}
+          <p>{t(word)}</p>
+          {phonetics && <p>{t(phonetics)}</p>}
+          {partOfSpeech && <h3>{t(partOfSpeech)}</h3>}
           <>
             <small className="meaning">{t(Texts.meaning)}</small>
             <ol>
               {first3Definitions.map((definition) => (
-                <li key={definition.definition}>
-                  {t(Texts.definition, { definition: definition.definition })}
-                </li>
+                <li key={definition.definition}>{t(definition.definition)}</li>
               ))}
             </ol>
           </>
@@ -45,9 +41,7 @@ export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
             <>
               <strong>{t(Texts.synonyms)}</strong>
               <span className="word__synonyms">
-                {t(Texts.first2Synonyms, {
-                  first2Synonyms: first2Synonyms.join(", "),
-                })}
+                {t(first2Synonyms.join(", "))}
               </span>
             </>
           )}
