@@ -49,6 +49,8 @@ export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
             <div className="word__source">
               <span>{t(Texts.source)}:</span>
               <a href={hasSourceUrls} target="_blank" rel="noopener noreferrer">
+                {/* Passing sourceUrls via a JSON variable because `t()` removes anything before the colon (:), 
+              which would strip out the "https:" part of the URL if passed directly. */}
                 “{t(Texts.sourceUrls, { sourceUrls })}”
               </a>
             </div>
