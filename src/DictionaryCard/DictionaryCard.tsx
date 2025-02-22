@@ -29,12 +29,8 @@ export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
       {wordData && (
         <>
           <p>{t(Texts.word, { word })}</p>
-          <p>{t(Texts.phonetics, { phonetics })}</p>
-          {partOfSpeech && (
-            <>
-              <h3>{t(Texts.partOfSpeech, { partOfSpeech })}</h3>
-            </>
-          )}
+          {phonetics && <p>{t(Texts.phonetics, { phonetics })}</p>}
+          {partOfSpeech && <h3>{t(Texts.partOfSpeech, { partOfSpeech })}</h3>}
           <>
             <small className="meaning">{t(Texts.meaning)}</small>
             <ol>
