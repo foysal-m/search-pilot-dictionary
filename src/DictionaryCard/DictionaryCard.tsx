@@ -18,9 +18,6 @@ export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
   const first3Definitions = definitions.slice(0, 3);
   const hasSynonyms = Array.isArray(synonyms) && synonyms.length > 0;
   const first2Synonyms = hasSynonyms && synonyms.slice(0, 2);
-  const hasSourceUrls = Array.isArray(sourceUrls)
-    ? sourceUrls.join(", ")
-    : sourceUrls;
 
   return (
     <div className="dictionary__card">
@@ -45,10 +42,10 @@ export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
               </span>
             </>
           )}
-          {sourceUrls.length > 0 && (
+          {sourceUrls && (
             <div className="word__source">
               <span>{t(Texts.source)}:</span>
-              <a href={hasSourceUrls} target="_blank" rel="noopener noreferrer">
+              <a href={sourceUrls} target="_blank" rel="noopener noreferrer">
                 {/* Passing sourceUrls via a JSON variable because `t()` removes anything before the colon (:), 
               which would strip out the "https:" part of the URL if passed directly. */}
                 “{t(Texts.sourceUrls, { sourceUrls })}”

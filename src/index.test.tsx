@@ -7,13 +7,11 @@ import { App } from "./App/App";
 describe("Initial renders", () => {
   it("should initially render the app correctly", () => {
     const queryClient = new QueryClient();
-
     render(
       <QueryClientProvider client={queryClient}>
         <App />
       </QueryClientProvider>
     );
-
     const appElement = screen.getByRole("heading", { name: /dictionary/i });
     expect(appElement).toBeInTheDocument();
   });
