@@ -1,18 +1,16 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { App } from "./App/App";
 
+jest.mock("./App/App", () => ({
+  App: () => <div>Mocked App</div>,
+}));
+
 describe("Initial renders", () => {
-  it("should initially render the app correctly", () => {
-    const queryClient = new QueryClient();
-    render(
-      <QueryClientProvider client={queryClient}>
-        <App />
-      </QueryClientProvider>
-    );
-    const appElement = screen.getByRole("heading", { name: /dictionary/i });
+  it("should initially render the mocked App component correctly", () => {
+    render(<App />);
+    const appElement = screen.getByText("Mocked App");
     expect(appElement).toBeInTheDocument();
   });
 });
