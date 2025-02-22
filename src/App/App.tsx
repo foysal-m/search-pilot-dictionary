@@ -4,6 +4,7 @@ import { SearchBar } from "../SearchBar/SearchBar";
 import { DictionaryCard } from "../DictionaryCard/DictionaryCard";
 import { useDictionary } from "../Hooks/useDictionary";
 import Texts from "../locales/dictionary.json";
+import ".././i18n";
 import "./App.scss";
 
 export const App = () => {

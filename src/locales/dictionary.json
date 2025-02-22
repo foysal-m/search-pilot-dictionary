@@ -8,5 +8,6 @@
   "synonyms": "synonyms",
   "first2Synonyms": "{{first2Synonyms}}",
   "source": "source",
-  "sourceUrls": "{{sourceUrls}}"
+  "sourceUrls": "{{sourceUrls}}",
+  "phonetics": "{{phonetics}}"
 }
