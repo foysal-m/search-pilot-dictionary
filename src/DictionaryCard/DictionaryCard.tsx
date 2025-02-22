@@ -25,7 +25,9 @@ export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
         <>
           <p>{t(word)}</p>
           {phonetics && <p>{t(phonetics)}</p>}
-          {partOfSpeech && <h3>{t(partOfSpeech)}</h3>}
+          {partOfSpeech && (
+            <p className="parts__of__speech">{t(partOfSpeech)}</p>
+          )}
           <>
             <small className="meaning">{t(Texts.meaning)}</small>
             <ol>

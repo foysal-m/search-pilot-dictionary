@@ -8,6 +8,7 @@ $margin-generic: 10px;
   box-shadow: 0 0 $margin-generic rgba(0, 0, 0, 0.1);
   font-size: medium;
   padding: $margin-generic $margin-generic * 2;
+  font-weight: bold;
 }
 
 .word__source {
@@ -28,7 +29,7 @@ ol {
 
 li {
   font-size: medium;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .word__source a {
@@ -45,8 +46,13 @@ li {
 }
 
 strong {
-  font-size: large;
+  font-size: larger;
   margin-right: $margin-generic;
+}
+
+.parts__of__speech {
+  font-size: larger;
+  font-weight: bolder;
 }
 
 @media (max-width: 600px) {
