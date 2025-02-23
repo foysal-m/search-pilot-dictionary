@@ -6,5 +6,6 @@ export const useDictionary = (word: string) =>
   useQuery<ReturnedWordType[], Error>({
     queryKey: ["words", word],
     queryFn: () => fetchWords(word),
+    enabled: !!word,
     retry: false,
   });
