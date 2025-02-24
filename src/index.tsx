@@ -12,9 +12,6 @@ hydrateRoot(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <App />
-      {process.env.NODE_ENV === "development" && (
-        <ReactQueryDevtools initialIsOpen={false} />
-      )}
     </QueryClientProvider>
   </React.StrictMode>
 );
