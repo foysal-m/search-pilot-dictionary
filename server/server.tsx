@@ -1,45 +1,42 @@
-import express from "express";
+require("ignore-styles");
+
 import React from "react";
-import fs from "fs";
-import path from "path";
-import ReactDOMServer from "react-dom/server";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+import express from "express";
+import { renderToString } from "react-dom/server";
 import { App } from "../src/App/App";
 
-const PORT = 3000;
 const app = express();
+const port = 4000;
 const queryClient = new QueryClient();
 
-// Serve static assets (like JS and CSS)
-app.use(express.static(path.resolve(__dirname, "../dist")));
-
-// Function to create the HTML string with SSR
-const createHtml = async () => {
-  const app = ReactDOMServer.renderToString(
+//* - it will match every request
+app.use(express.static("public"));
+app.get("*", (req, res) => {
+  const html = renderToString(
     <QueryClientProvider client={queryClient}>
       <App />
     </QueryClientProvider>
   );
 
-  const html = await fs.promises.readFile(
-    path.resolve(__dirname, "../dist/index.html"),
-    "utf-8"
+  res.send(
+    `
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <title>Search pilot dictionary - SSR</title>
+      </head>
+      <body>
+        <div id="root">${html}</div>
+        <script src="/bundle.js"></script>
+      </body>
+    </html>
+  `
   );
-
-  const reactHtml = html.replace(
-    '<div id="root"></div>',
-    `<div id="root">${app}</div>`
-  );
-  return reactHtml;
-};
-
-// Handle all routes by sending the SSR page
-app.get("*", async (req, res) => {
-  const html = await createHtml();
-  res.send(html);
 });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`App launched on ${PORT}`);
+app.listen(port, () => {
+  console.log("Server is running on port: ", port);
 });

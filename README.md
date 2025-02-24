@@ -19,9 +19,9 @@ This is a web application for dictionary to provide users with detailed informat
 
 3. Install dependencies:
 
-   `npm install` && run `npm run dev` to start the server
+   `npm install` && run `npm run start` to start the server
 
-4. Open your browser and navigate to `http://localhost:3000`.
+4. Open your browser and navigate to `http://localhost:4000` where express server is running.
 
 ## test
 
@@ -65,8 +65,4 @@ Jest is a JavaScript testing framework used for unit and integration testing. It
 
 ## Improvements to be Made:
 
-- I encountered a hydration error during SSR (Server-Side Rendering) in console.
-- Not sure if a browser extension is causing the issue, but I’m hoping to find a solution.
-- While SSR improves performance and is better for SEO, it does have some caveats.
-- If it weren’t for this error, I would be able to proceed with writing Cypress tests or improving the application with E2E tests to ensure proper functionality.
-  ![alt text](image.png)
+- As I figured out hydration error, would be great to have some E2E test using cypress

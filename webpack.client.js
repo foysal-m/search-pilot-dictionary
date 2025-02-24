@@ -3,10 +3,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 
 module.exports = {
+  mode: "production",
   entry: "./src/index.tsx",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"), // output directory
+    path: path.resolve(__dirname, "public"), // output directory
     clean: true,
   },
   resolve: {
@@ -35,12 +36,7 @@ module.exports = {
     ],
   },
   devtool: "inline-source-map",
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
     static: path.join(__dirname, "dist"), // serve static files
     port: 3000, // your server port
