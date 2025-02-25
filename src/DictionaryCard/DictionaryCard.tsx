@@ -31,8 +31,8 @@ export const DictionaryCard = ({ wordData }: DictionaryCardProp) => {
           <>
             <small className="meaning">{t(Texts.meaning)}</small>
             <ol>
-              {first3Definitions.map((definition) => (
-                <li key={definition.definition}>{t(definition.definition)}</li>
+              {first3Definitions.map((definition, index) => (
+                <li key={index}>{t(definition.definition)}</li>
               ))}
             </ol>
           </>

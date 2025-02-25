@@ -50,7 +50,7 @@ export const App = () => {
       {isError && !isLoading && word && (
         <div className="error">{error.message}</div>
       )}
-      {isLoading && word && <p>Loading...</p>}
+      {isLoading && word && <p data-cy="loading">Loading...</p>}
       {!isLoading && wordData && <DictionaryCard wordData={wordData} />}
     </div>
   );
